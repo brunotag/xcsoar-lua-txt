@@ -17,7 +17,7 @@ This is an add-on for XCSoar, for Android only at this stage.
 ## 1.2 Installation (Android)
 
 0 - Install all the prerequisites - duh! - ensure that GSM Helper Tool has the "SMS" permission from your Android phone   
-1 - (optional but recommended) make a backup copy of your XCSoarData folder from you Android phone
+1 - (optional but recommended) make a backup copy of your XCSoarData folder from you Android phone   
 2 - Copy the [/gestures](/gestures) and [/lua](/lua) folders, as they are, in your XCSoarData folder, on your Android phone   
 3 - Open XCSoar   
 4 - Navigate Config => System => Look => Language, Input   
