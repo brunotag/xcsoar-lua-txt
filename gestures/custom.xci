@@ -1,0 +1,36 @@
+#-----------------------#
+#Custom Gestures        #
+#-----------------------#
+
+mode=default
+type=gesture
+data=UDUD
+event=RunLuaFile
+
+
+
+#----------------------------#
+#Custom Menu Buttons         #
+#----------------------------#
+
+mode=Menu
+type=key
+event=Mode TXT1
+label=TXT
+location=5
+
+# -------------
+# mode=TXT1
+# -------------
+
+mode=TXT1
+type=key
+event=RunLuaFile txt/_ops-normal.lua
+label=Ops Normal
+location=7
+
+mode=TXT1
+type=key
+event=RunLuaFile txt/_landing-out.lua
+label=Landing Out
+location=9
