@@ -54,3 +54,7 @@ optional - If you want to learn more about GSM Modem, follow the [tutorial by th
 
 ## 1.6 Troubleshooting
 [TODO]
+
+# 2. Contribution Guide
+... meh ... it's so small.. just open a PR, communicate the intent, we'll take it from there.
+Or open an issue if you can't be bothered coding in Lua :-)
