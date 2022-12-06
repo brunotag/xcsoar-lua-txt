@@ -5,7 +5,7 @@ The main intent is to **communicate your glider's position to your base** via te
 
 # 1. User Guide
 
-This is an add-on for XCSoar, for Android only at this stage.
+This is an add-on for XCSoar, for Android only at this stage. It allows you to send text messages from XCSoar with a click of a button. The main intent is to send your position to a mobile phone, for whatever reason (landed out, ops normal, ...)
 
 ## 1.1 Prerequisites (Android)
 
