@@ -2,6 +2,7 @@ return {
     glider = "ZK-GZZ",
     retrieve_phone = "+64987654321",
     opsnormal_phone = "+64123456789",
+    friend_you_like_to_brag_with_phone = "+6411111111",
     unit = "metric",                    --or "feet" (default)
     format = "g-maps",                  --or "simple" (default)
     gsm_modem_config = {
