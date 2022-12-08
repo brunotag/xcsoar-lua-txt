@@ -13,7 +13,7 @@ The main intent is to **communicate your glider's position to your base** via te
 This is an add-on for XCSoar, for Android only at this stage. It allows you to send text messages from XCSoar with a click of a button.    
 The main intent is to send your position to a mobile phone, for whatever reason (landed out, ops normal, ...)   
 
-It's a thing I've made mostly for myself, then decided to publish it since people expressed interest; it's a script, it's not designed to be particularly user-friendly. But if you're minimally IT-literate, and you pay enough attention to detail, you should be able to take advantage of this quite easily.   
+It's a thing **I've made mostly for myself**, then decided to publish it since people expressed interest; it's a script, it's not designed to be particularly user-friendly. But if you're minimally IT-literate, and you pay enough attention to detail, you should be able to take advantage of this quite easily.   
 
 The installation is manual on purpose: to mess around with scripts, you have to know what you're doing. Also, the procedure described in the instructions fit for an out-of-the-box installation of XCSoar, but being XCSoar quite customisable, I can't be sure of what you've done in yours, so I can't the required assumptions that an automated installation process would require.   
 
@@ -26,7 +26,7 @@ Feedback is very welcome, in form of [issues](https://github.com/brunotag/xcsoar
 
 0 - [XCSoar](https://play.google.com/store/apps/details?id=org.xcsoar&hl=en_NZ&gl=US) Android App - duh!   
 1 - [GSM Modem](https://play.google.com/store/apps/details?id=com.gsmmodem&hl=en_NZ&gl=US) Android App - the free version is fine, if you are ok with ads (credits: [Sindhi Developers](https://play.google.com/store/apps/developer?id=Sindhi+Developers))    
-2 - [GSM Helper Tool](https://github.com/sadiqodho/GSM-Helper-Tool) Android App - this one isn't available on the Play Store, you need to install it from the .apk (credits: [Muhammad Sadiq Odho](https://github.com/sadiqodho))   
+2 - [GSM Helper Tool](https://github.com/sadiqodho/GSM-Helper-Tool) Android App - this one isn't available on the Play Store, you need to install it from the .apk. Open [this link](https://github.com/sadiqodho/GSM-Helper-Tool/blob/master/download-app/latest-helper-tool-app.apk?raw=true) from your phone to do so (credits: [Muhammad Sadiq Odho](https://github.com/sadiqodho))   
 3 - (optional, but recommended) a text editor for Android, for example [Text Editor](https://play.google.com/store/apps/details?id=com.byteexperts.texteditor&hl=en_NZ&gl=US) (credits: [Byte Mobile](https://play.google.com/store/apps/developer?id=Byte+Mobile&hl=en_NZ&gl=US))
 
 ## 1.2 Installation (Android)
@@ -43,12 +43,28 @@ Feedback is very welcome, in form of [issues](https://github.com/brunotag/xcsoar
 
 ### 1.3.1 Configure GSM Modem
 
+optional - If you want to learn more about GSM Modem, follow the [tutorial by the author](https://sindhitutorials.com/blog/gsm-modem-free-sms-android-app/).
+
+### 1.3.1.1 Configure GSM Modem Settings
+
 1 - Open GSM Modem     
 2 - Tap Settings   
 3 - Enter an available Port Number - a good one is 8787   
 4 - Ensure "Receive SMS at URL" and "Outgoing No of SMS per minutes" are NOT selected   
-5 - Tap Save. Tap Close.   
-optional - If you want to learn more about GSM Modem, follow the [tutorial by the author](https://sindhitutorials.com/blog/gsm-modem-free-sms-android-app/).
+5 - Tap Save   
+6 - For good measure, close and reopen GSM Modem   
+
+### 1.3.1.2 Configure GSM Modem "User Management"
+
+1 - Open GSM Modem     
+2 - Tap Users   
+3 - Tap the round plus + sign       
+4 - Enter "usr" in Username   
+5 - Enter "zzz" in Password   
+6 - Tick "Enable"   
+7 - Click "Save"
+note: these credentials are only local, they don't need to be secure. You can change them, but if you do so, you have also to update them in [config.lua](/lua/txt/config.lua)
+8 - For good measure, close and reopen GSM Modem   
 
 ### 1.3.2 Configure our Add On
 
@@ -64,7 +80,7 @@ return {
     retrieve_phone = "+64987654321",
     opsnormal_phone = "+64123456789",
     friend_you_like_to_brag_with_phone = "+6411111111",
-    unit = "feet",                    --or "metric"
+    unit = "feet",                      --or "metric"
     format = "simple",                  --or "g-maps"
     gsm_modem_config = {
         ip = "localhost",
@@ -119,7 +135,10 @@ txt_engine.send({
 ```
 
 ### 1.5.2 How to add new buttons
-[TODO...]
+The whole thing is based on XCSoar Lua & Events. 
+You're a glider pilot, so you must be a smart chap: I'm pretty sure you can work it out by reverse-engineering the [txt.xci](gestures/txt.xci), which defines the custom buttons.
+That's how I figured this out in the first place. Otherwise, please wait for the tutorial, which is...   
+[...COMING SOON...]
 
 ## 1.6 Troubleshooting
 
